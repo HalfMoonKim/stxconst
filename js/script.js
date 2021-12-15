@@ -17,6 +17,23 @@ $(document).ready(function () {
         header.removeClass(header_class);
     });
 
+    // Main Menu Focus
+    for(let i = 0; i <= $('.mainmenu').length; i++) {
+        $('.depth1 > li > a').eq(i).mouseenter(function(){
+            $('.mainmenu').eq(i).addClass('mainmenu-focus')
+        });
+        $('.depth1 > li > a').eq(i).mouseleave(function(){
+            $('.mainmenu').eq(i).removeClass('mainmenu-focus')
+        });
+
+        $('.depth2').eq(i).mouseenter(function(){
+            $('.mainmenu').eq(i).addClass('mainmenu-focus')
+        });
+        $('.depth2').eq(i).mouseleave(function(){
+            $('.mainmenu').eq(i).removeClass('mainmenu-focus')
+        });
+    };
+
     // Move to business
     $('.move-cate').click(function (e) {
         // event return

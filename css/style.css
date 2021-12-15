@@ -1,7 +1,7 @@
 @import url("notosanskr/notosanskr.css");
 * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; outline-style: none; }
 
-a { color: #333; text-decoration: none; }
+a { color: #444; text-decoration: none; }
 
 img { vertical-align: middle; border: 0; }
 
@@ -9,196 +9,199 @@ ul, li { list-style: none; }
 
 html { font-size: 10px; }
 
-body { min-width: 120rem; padding-top: 8rem; font-family: 'Noto Sans KR'; font-size: 1.6rem; color: #444; font-weight: 300; line-height: 1.6; letter-spacing: 0.1rem; }
+body { min-width: 120rem; padding-top: 8rem; font-family: 'Noto Sans KR', sans-serif; font-size: 1.6rem; color: #444; font-weight: 300; line-height: 1.6; letter-spacing: 0.1rem; }
 
 /* Common */
-.pagew { position: relative; display: block; width: 120rem; margin: 0 auto; }
+.container { position: relative; display: block; width: 120rem; margin: 0 auto; }
 
 .clearfix:after { content: ''; position: relative; display: block; width: 100%; clear: both; }
 
-/* // Common */
 /* Modal Window */
 .modal { position: fixed; left: 0; top: 0; display: block; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 15; }
 
-.modal .modal-cont { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; width: 55rem; height: 30rem; background: #fff; border-radius: 3rem 0 3rem 0; padding: 5rem; }
+.modal-cont { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; width: 55rem; height: 30rem; background: #fff; border-radius: 3rem 0 3rem 0; padding: 5rem; }
 
-.modal .modal-cont p { position: relative; display: block; margin-bottom: 5rem; font-size: 2.4rem; color: #000; font-weight: 500; line-height: 1.2; text-align: center; }
+.modal-cont p { position: relative; display: block; margin-bottom: 5rem; font-size: 2.4rem; color: #000; font-weight: 500; line-height: 1.2; text-align: center; }
 
-.modal .modal-cont span { position: relative; display: block; font-size: 1.6rem; color: #000; font-weight: 100; line-height: 1.4; text-align: center; }
+.modal-cont span { position: relative; display: block; font-size: 1.6rem; color: #000; font-weight: 100; line-height: 1.4; text-align: center; }
 
-.modal .modal-cont button { position: relative; display: block; float: right; background: #000; border: 0; border-radius: 0.4rem; padding: 0 3rem; margin-top: 3rem; cursor: pointer; font-size: 1.2rem; color: #fff; font-weight: 100; line-height: 4rem; text-align: center; }
+.modal-cont button { position: relative; display: block; float: right; background: #000; border: 0; border-radius: 0.4rem; padding: 0 3rem; margin-top: 3rem; cursor: pointer; font-size: 1.2rem; color: #fff; font-weight: 100; line-height: 4rem; text-align: center; }
 
-/* // Modal Window */
 /* Wrap */
-.wrap { position: relative; display: block; /* Header */ /* // Header */ /* Visual */ /* // Visual */ /* Business */ /* // Business */ /* Board */ /* // Board */ /* Customer */ /* // Customer */ /* About */ /* // About */ /* Footer */ /* // Footer */ }
+.wrap { position: relative; display: block; }
 
-.wrap .header { position: fixed; left: 0; top: 0; display: block; width: 100%; min-width: 150rem; height: 8rem; -webkit-box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, 0.2); overflow: hidden; z-index: 10; -webkit-transition: height 0.5s; transition: height 0.5s; }
+/* Header */
+.header { position: fixed; left: 0; top: 0; display: block; width: 100%; min-width: 150rem; height: 8rem; -webkit-box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, 0.2); overflow: hidden; z-index: 10; -webkit-transition: height 0.5s; transition: height 0.5s; }
 
-.wrap .header .header-bg { position: absolute; left: 0; top: 0; display: block; width: 100%; height: 8rem; background: #fff; border-bottom: 0.1rem solid #e8e8e8; }
+.header_open { height: 40rem !important; }
 
-.wrap .header .logo { position: absolute; left: 5.5rem; top: 2rem; display: block; width: 15rem; height: 3.9rem; background: url("../images/logo.png") no-repeat center; }
+.header-bg { position: absolute; left: 0; top: 0; display: block; width: 100%; height: 8rem; background: #fff; border-bottom: 0.1rem solid #e8e8e8; }
 
-.wrap .header .gnb { position: absolute; left: 0; top: 8rem; display: block; width: 100%; background: rgba(0, 0, 0, 0.6); font-size: 0; text-align: center; }
+.logo { position: absolute; left: 5.5rem; top: 2rem; display: block; width: 15rem; height: 3.9rem; background: url("../images/logo.png") no-repeat center; }
 
-.wrap .header .gnb .depth1 { position: relative; display: inline-block; margin-top: -8rem; }
+.gnb { position: absolute; left: 0; top: 8rem; display: block; width: 100%; background: rgba(0, 0, 0, 0.6); font-size: 0; text-align: center; }
 
-.wrap .header .gnb .depth1 > li { position: relative; display: block; float: left; width: 18rem; }
+.depth1 { position: relative; display: inline-block; margin-top: -8rem; }
 
-.wrap .header .gnb .depth1 > li .mainmenu { position: relative; display: block; font-size: 1.9rem; color: #000; font-weight: 500; line-height: 8rem; text-align: left; }
+.depth1 > li { position: relative; display: block; float: left; width: 18rem; }
 
-.wrap .header .gnb .depth1 > li .mainmenu:hover { color: #ed1c24; }
+.mainmenu { position: relative; display: block; font-size: 1.9rem; color: #000; font-weight: 500; line-height: 8rem; text-align: left; }
 
-.wrap .header .gnb .depth1 > li .depth2 { position: relative; display: block; padding: 4rem 0; }
+.mainmenu-focus { color: #ed1c24; }
 
-.wrap .header .gnb .depth1 > li .depth2 > li { position: relative; display: block; }
+.depth2 { position: relative; display: block; padding: 4rem 0; }
 
-.wrap .header .gnb .depth1 > li .depth2 > li:hover .mainmenu { color: #ed1c24; }
+.depth2 > li { position: relative; display: block; }
 
-.wrap .header .gnb .depth1 > li .depth2 > li > a { position: relative; display: block; font-size: 1.5rem; color: #fff; font-weight: 100; line-height: 3rem; text-align: left; }
+.depth2 > li > a { position: relative; display: block; font-size: 1.5rem; color: #fff; font-weight: 100; line-height: 3rem; text-align: left; }
 
-.wrap .header .lang { position: absolute; right: 7rem; top: 3.5rem; display: block; }
+.lang { position: absolute; right: 7rem; top: 3.5rem; display: block; }
 
-.wrap .header .lang .lang-list { position: relative; display: block; }
+.lang-list { position: relative; display: block; }
 
-.wrap .header .lang .lang-list > li { position: relative; display: block; float: left; }
+.lang-list > li { position: relative; display: block; float: left; }
 
-.wrap .header .lang .lang-list > li:after { content: ''; position: absolute; right: 0; top: 0.2rem; width: 0.1rem; height: 1.1rem; background: #999; }
+.lang-list > li:after { content: ''; position: absolute; right: 0; top: 0.2rem; width: 0.1rem; height: 1.1rem; background: #999; }
 
-.wrap .header .lang .lang-list > li:last-child > a { margin-right: 0; }
+.lang-list > li:last-child > a { margin-right: 0; }
 
-.wrap .header .lang .lang-list > li:last-child:after { content: none; }
+.lang-list > li:last-child:after { content: none; }
 
-.wrap .header .lang .lang-list > li a { position: relative; display: block; margin: 0 1.5rem; font-size: 1.5rem; color: #888; font-weight: 500; line-height: 1; text-transform: uppercase; }
+.lang-list > li a { position: relative; display: block; margin: 0 1.5rem; font-size: 1.5rem; color: #888; font-weight: 500; line-height: 1; text-transform: uppercase; }
 
-.wrap .header .lang .lang-list .lang-focus { color: #000 !important; }
+.lang-focus { color: #000 !important; }
 
-.wrap .header_open { height: 40rem !important; }
+/* Visual */
+.visual { position: relative; display: block; height: 91rem; background: url("../images/img_visual01.png") no-repeat center; background-size: cover; background-attachment: fixed; padding-top: 18rem; overflow: hidden; }
 
-.wrap .visual { position: relative; display: block; height: 91rem; background: url("../images/img_visual01.png") no-repeat center; background-size: cover; background-attachment: fixed; padding-top: 18rem; overflow: hidden; }
+.visual-title { position: relative; display: block; padding-top: 5.5rem; font-size: 7rem; color: #fff; font-weight: 500; line-height: 1; }
 
-.wrap .visual .pagew .visual-title { position: relative; display: block; padding-top: 5.5rem; font-size: 7rem; color: #fff; font-weight: 500; line-height: 1; }
+.visual-title:before { content: ''; position: absolute; left: 0; top: 0; width: 6rem; height: 0.5rem; background: #ed1c24; }
 
-.wrap .visual .pagew .visual-title:before { content: ''; position: absolute; left: 0; top: 0; width: 6rem; height: 0.5rem; background: #ed1c24; }
+.visual-title > span { position: relative; display: block; margin-bottom: 2rem; }
 
-.wrap .visual .pagew .visual-title > span { position: relative; display: block; margin-bottom: 2rem; }
+.visual-txt { position: relative; display: block; margin-top: 4.5rem; font-size: 2.1rem; color: #fff; font-weight: 100; }
 
-.wrap .visual .pagew .visual-txt { position: relative; display: block; margin-top: 4.5rem; font-size: 2.1rem; color: #fff; font-weight: 100; }
+.move-cate { position: absolute; left: 50%; bottom: 4rem; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: block; width: 3.3rem; height: 3.3rem; background: url("../images/bg_common.png") no-repeat; background-position-X: -12.2rem; background-position-Y: 0; font-size: 0; }
 
-.wrap .visual .move-cate { position: absolute; left: 50%; bottom: 4rem; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: block; width: 3.3rem; height: 3.3rem; background: url("../images/bg_common.png") no-repeat; background-position-X: -12.2rem; background-position-Y: 0; font-size: 0; }
+/* Business */
+.cate { position: relative; display: block; padding: 12rem 0 13.5rem 0; }
 
-.wrap .cate { position: relative; display: block; padding: 12rem 0 13.5rem 0; }
+.cate-title { position: relative; display: block; padding-bottom: 3rem; font-size: 4.4rem; color: #111; font-weight: 500; line-height: 1; text-align: center; }
 
-.wrap .cate .pagew .cate-title { position: relative; display: block; padding-bottom: 3rem; font-size: 4.4rem; color: #111; font-weight: 500; line-height: 1; text-align: center; }
+.cate-title:after { content: ''; position: absolute; left: 50%; bottom: 0; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: block; width: 3.7rem; height: 0.4rem; background: #f00; }
 
-.wrap .cate .pagew .cate-title:after { content: ''; position: absolute; left: 50%; bottom: 0; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: block; width: 3.7rem; height: 0.4rem; background: #f00; }
+.cate-desc { position: relative; display: block; margin: 2.5rem 0 6.5rem 0; font-weight: 100; text-align: center; }
 
-.wrap .cate .pagew .cate-desc { position: relative; display: block; margin: 2.5rem 0 6.5rem 0; font-weight: 100; text-align: center; }
+.cate-list { position: relative; display: block; overflow: hidden; }
 
-.wrap .cate .pagew .cate-list { position: relative; display: block; overflow: hidden; }
+.cate-list > li { position: relative; display: block; float: left; width: 20%; height: 42rem; background: url("../images/img_business.png") no-repeat; background-position-Y: 0; }
 
-.wrap .cate .pagew .cate-list > li { position: relative; display: block; float: left; width: 20%; height: 42rem; background: url("../images/img_business.png") no-repeat; background-position-Y: 0; }
+.cate-list > li .cate-txt { position: relative; display: block; padding-top: 10rem; font-size: 2.4rem; color: #fff; font-weight: 100; text-align: center; }
 
-.wrap .cate .pagew .cate-list > li .cate-txt { position: relative; display: block; padding-top: 10rem; font-size: 2.4rem; color: #fff; font-weight: 100; text-align: center; }
+.cate-list > li .cate-img { position: relative; display: block; background: url("../images/bg_common.png") no-repeat; margin: 0 auto; margin-top: 8.5rem; visibility: hidden; opacity: 0; -webkit-transition: opacity 0.5s; transition: opacity 0.5s; }
 
-.wrap .cate .pagew .cate-list > li .cate-img { position: relative; display: block; background: url("../images/bg_common.png") no-repeat; margin: 0 auto; margin-top: 8.5rem; visibility: hidden; opacity: 0; -webkit-transition: opacity 0.5s; transition: opacity 0.5s; }
+.cate-list > li:nth-child(1) { background-position-X: 0; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(1) { background-position-X: 0; }
+.cate-list > li:nth-child(1) .cate-img { width: 12.3rem; height: 11.2rem; background-position-x: -16.8rem; background-position-y: 0; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(1) .cate-img { width: 12.3rem; height: 11.2rem; background-position-x: -16.8rem; background-position-y: 0; }
+.cate-list > li:nth-child(2) { background-position-X: -24rem; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(2) { background-position-X: -24rem; }
+.cate-list > li:nth-child(2) .cate-img { width: 12.3rem; height: 11.2rem; background-position-x: -30.1rem; background-position-y: 0; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(2) .cate-img { width: 12.3rem; height: 11.2rem; background-position-x: -30.1rem; background-position-y: 0; }
+.cate-list > li:nth-child(3) { background-position-X: -48rem; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(3) { background-position-X: -48rem; }
+.cate-list > li:nth-child(3) .cate-img { width: 13rem; height: 10.6rem; background-position-x: 0; background-position-y: -12.2rem; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(3) .cate-img { width: 13rem; height: 10.6rem; background-position-x: 0; background-position-y: -12.2rem; }
+.cate-list > li:nth-child(4) { background-position-X: -72rem; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(4) { background-position-X: -72rem; }
+.cate-list > li:nth-child(4) .cate-img { width: 13rem; height: 11.1rem; background-position-x: -14rem; background-position-y: -12.2rem; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(4) .cate-img { width: 13rem; height: 11.1rem; background-position-x: -14rem; background-position-y: -12.2rem; }
+.cate-list > li:nth-child(5) { background-position-X: -96rem; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(5) { background-position-X: -96rem; }
+.cate-list > li:nth-child(5) .cate-img { width: 10.2rem; height: 10.5rem; background-position-x: -28rem; background-position-y: -12.2rem; }
 
-.wrap .cate .pagew .cate-list > li:nth-child(5) .cate-img { width: 10.2rem; height: 10.5rem; background-position-x: -28rem; background-position-y: -12.2rem; }
+.cate-list > li > a { position: relative; display: block; height: 100%; background: rgba(243, 127, 37, 0); -webkit-transition: background 0.3s; transition: background 0.3s; }
 
-.wrap .cate .pagew .cate-list > li > a { position: relative; display: block; height: 100%; background: rgba(243, 127, 37, 0); -webkit-transition: background 0.3s; transition: background 0.3s; }
+.cate-list > li > a:hover { background: #f37f25; }
 
-.wrap .cate .pagew .cate-list > li > a:hover { background: #f37f25; }
+.cate-list > li > a:hover .cate-img { visibility: visible; opacity: 1.0; }
 
-.wrap .cate .pagew .cate-list > li > a:hover .cate-img { visibility: visible; opacity: 1.0; }
+/* Board */
+.board { position: relative; display: block; /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff0000+50,58595b+50 */ background: #ec1c24; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ec1c24), color-stop(50%, #58595b)); background: linear-gradient(to right, #ec1c24 50%, #58595b 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#58595b', GradientType=1); /* IE6-9 */ padding: 5.5rem 0; }
 
-.wrap .board { position: relative; display: block; /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff0000+50,58595b+50 */ background: #ec1c24; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ec1c24), color-stop(50%, #58595b)); background: linear-gradient(to right, #ec1c24 50%, #58595b 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#58595b', GradientType=1); /* IE6-9 */ padding: 5.5rem 0; }
+.board .container { display: table; table-layout: fixed; }
 
-.wrap .board .pagew { display: table; table-layout: fixed; }
+.board-box { position: relative; display: table-cell; width: 50%; }
 
-.wrap .board .pagew .board-box { position: relative; display: table-cell; width: 50%; }
+.board-box h3 { position: relative; display: block; width: 50rem; margin-bottom: 5rem; font-size: 3.2rem; color: #fff; font-weight: 100; line-height: 1; }
 
-.wrap .board .pagew .board-box h3 { position: relative; display: block; width: 50rem; margin-bottom: 5rem; font-size: 3.2rem; color: #fff; font-weight: 100; line-height: 1; }
+.board-list { position: relative; display: block; width: 50rem; border-top: 0.1rem solid rgba(255, 255, 255, 0.5); }
 
-.wrap .board .pagew .board-box .board-list { position: relative; display: block; width: 50rem; border-top: 0.1rem solid rgba(255, 255, 255, 0.5); }
+.board-list > li { position: relative; display: block; border-bottom: 0.1rem solid rgba(255, 255, 255, 0.5); padding: 2.2rem 0; }
 
-.wrap .board .pagew .board-box .board-list > li { position: relative; display: block; border-bottom: 0.1rem solid rgba(255, 255, 255, 0.5); padding: 2.2rem 0; }
+.board-list > li > a { position: relative; display: block; overflow: hidden; }
 
-.wrap .board .pagew .board-box .board-list > li > a { position: relative; display: block; overflow: hidden; }
+.board-txt { position: relative; display: block; float: left; width: 37rem; overflow: hidden; color: #fff; font-weight: 100; line-height: 1; text-overflow: ellipsis; white-space: nowrap; }
 
-.wrap .board .pagew .board-box .board-list > li > a .board-txt { position: relative; display: block; float: left; width: 37rem; overflow: hidden; color: #fff; font-weight: 100; line-height: 1; text-overflow: ellipsis; white-space: nowrap; }
+.board-more { position: relative; display: block; float: right; width: 7.5rem; height: 2.3rem; background: url("../images/bg_common.png") no-repeat; background-position: 0 -4.9rem; font-size: 0; }
 
-.wrap .board .pagew .board-box .board-list > li > a .board-more { position: relative; display: block; float: right; width: 7.5rem; height: 2.3rem; background: url("../images/bg_common.png") no-repeat; background-position: 0 -4.9rem; font-size: 0; }
+.pl-100 { padding-left: 10rem; }
 
-.wrap .board .pagew .pl-100 { padding-left: 10rem; }
+/* Customer */
+.cs { position: relative; display: block; background: #f8f8f8; padding: 6rem 0 10rem 0; }
 
-.wrap .cs { position: relative; display: block; background: #f8f8f8; padding: 6rem 0 10rem 0; }
+.cs .container { display: table; table-layout: fixed; }
 
-.wrap .cs .pagew { display: table; table-layout: fixed; }
+.cs-box { position: relative; display: table-cell; width: 50%; padding: 4rem 6rem; }
 
-.wrap .cs .pagew .cs-box { position: relative; display: table-cell; width: 50%; padding: 4rem 6rem; }
+.cs-title { position: relative; display: block; margin-bottom: 2.2rem; font-size: 3rem; color: #000; font-weight: 500; line-height: 1; text-transform: uppercase; }
 
-.wrap .cs .pagew .cs-box .cs-title { position: relative; display: block; margin-bottom: 2.2rem; font-size: 3rem; color: #000; font-weight: 500; line-height: 1; text-transform: uppercase; }
+.cs-desc { position: relative; display: block; font-size: 1.5rem; color: #000; font-weight: 100; }
 
-.wrap .cs .pagew .cs-box .cs-desc { position: relative; display: block; font-size: 1.5rem; color: #000; font-weight: 100; }
+.cs-bg-1 { background: #fff url("../images/bg_faq.png") no-repeat; background-position: 38rem 50%; border-right: 0.1rem solid #f8f8f8; }
 
-.wrap .cs .pagew .cs-bg-1 { background: #fff url("../images/bg_faq.png") no-repeat; background-position: 38rem 50%; border-right: 0.1rem solid #f8f8f8; }
+.cs-bg-2 { background: #fff url("../images/bg_custom.png") no-repeat; background-position: 43rem 50%; border-left: 0.1rem solid #f8f8f8; }
 
-.wrap .cs .pagew .cs-bg-2 { background: #fff url("../images/bg_custom.png") no-repeat; background-position: 43rem 50%; border-left: 0.1rem solid #f8f8f8; }
+/* About */
+.about { position: relative; display: block; background: #fff; padding: 10rem 0; }
 
-.wrap .about { position: relative; display: block; background: #fff; padding: 10rem 0; }
+.about-top { position: relative; display: block; margin-bottom: 5.5rem; }
 
-.wrap .about .pagew .about-top { position: relative; display: block; margin-bottom: 5.5rem; }
+.about-top > div { position: relative; display: block; float: left; width: 50%; height: 37rem; overflow: hidden; }
 
-.wrap .about .pagew .about-top > div { position: relative; display: block; float: left; width: 50%; height: 37rem; overflow: hidden; }
+.about-cont { padding-top: 4rem; }
 
-.wrap .about .pagew .about-top .about-cont { padding-top: 4rem; }
+.about-title { position: relative; display: block; margin-bottom: 5.5rem; font-size: 4.4rem; color: #111; font-weight: 600; line-height: 1; }
 
-.wrap .about .pagew .about-top .about-cont .about-title { position: relative; display: block; margin-bottom: 5.5rem; font-size: 4.4rem; color: #111; font-weight: 600; line-height: 1; }
+.about-box { position: relative; display: block; padding: 0 2.5rem 0 10rem; }
 
-.wrap .about .pagew .about-top .about-cont .about-box { position: relative; display: block; padding: 0 2.5rem 0 10rem; }
+.about-box:before { content: ''; position: absolute; left: 0; top: 1.2rem; width: 3.7rem; height: 0.5rem; background: #ed1c24; }
 
-.wrap .about .pagew .about-top .about-cont .about-box:before { content: ''; position: absolute; left: 0; top: 1.2rem; width: 3.7rem; height: 0.5rem; background: #ed1c24; }
+.about-desc { position: relative; display: block; margin-bottom: 2rem; font-size: 2.1rem; color: #111; font-weight: 500; line-height: 1.4; }
 
-.wrap .about .pagew .about-top .about-cont .about-box .about-desc { position: relative; display: block; margin-bottom: 2rem; font-size: 2.1rem; color: #111; font-weight: 500; line-height: 1.4; }
+.about-txt { position: relative; display: block; font-size: 1.5rem; color: #444; font-weight: 100; }
 
-.wrap .about .pagew .about-top .about-cont .about-box .about-txt { position: relative; display: block; font-size: 1.5rem; color: #444; font-weight: 100; }
+.about-img { background: url("../images/img_about.png") no-repeat center; background-size: cover; }
 
-.wrap .about .pagew .about-top .about-img { background: url("../images/img_about.png") no-repeat center; background-size: cover; }
+.about-bottom { position: relative; display: block; font-size: 0; text-align: center; }
 
-.wrap .about .pagew .about-bottom { position: relative; display: block; font-size: 0; text-align: center; }
+.about-bottom a { position: relative; display: inline-block; width: 11rem; padding-top: 13.5rem; font-size: 2.2rem; color: #111; font-weight: 500; white-space: nowrap; }
 
-.wrap .about .pagew .about-bottom a { position: relative; display: inline-block; width: 11rem; padding-top: 13.5rem; font-size: 2.2rem; color: #111; font-weight: 500; white-space: nowrap; }
+.about-bottom a:nth-child(1) { background: url("../images/bg_icon.png") no-repeat; background-position: 0 0; margin-right: 21.5rem; }
 
-.wrap .about .pagew .about-bottom a:nth-child(1) { background: url("../images/bg_icon.png") no-repeat; background-position: 0 0; margin-right: 21.5rem; }
+.about-bottom a:nth-child(2) { background: url("../images/bg_icon.png") no-repeat; background-position: -11.5rem 0; }
 
-.wrap .about .pagew .about-bottom a:nth-child(2) { background: url("../images/bg_icon.png") no-repeat; background-position: -11.5rem 0; }
+.about-bottom a:nth-child(3) { background: url("../images/bg_icon.png") no-repeat; background-position: -22.8rem 0; margin-left: 21.5rem; }
 
-.wrap .about .pagew .about-bottom a:nth-child(3) { background: url("../images/bg_icon.png") no-repeat; background-position: -22.8rem 0; margin-left: 21.5rem; }
+/* Footer */
+.footer { position: relative; display: block; background: #4e4e4e; padding: 5rem 0; }
 
-.wrap .footer { position: relative; display: block; background: #4e4e4e; padding: 5rem 0; }
+.f-left { position: relative; display: block; float: left; width: 26rem; }
 
-.wrap .footer .pagew .f-left { position: relative; display: block; float: left; width: 26rem; }
+.f-right { position: relative; display: block; float: left; }
 
-.wrap .footer .pagew .f-right { position: relative; display: block; float: left; }
+.f-txt { position: relative; display: block; margin-bottom: 0.5rem; font-size: 1.3rem; color: #c3c3c3; font-weight: 100; white-space: nowrap; font-style: normal; }
 
-.wrap .footer .pagew .f-right .f-txt { position: relative; display: block; margin-bottom: 0.5rem; font-size: 1.3rem; color: #c3c3c3; font-weight: 100; white-space: nowrap; font-style: normal; }
-
-.wrap .footer .pagew .f-right .f-txt:last-child { margin-bottom: 0; }
+.f-txt:last-child { margin-bottom: 0; }
 /*# sourceMappingURL=style.css.map */
